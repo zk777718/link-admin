@@ -1,0 +1,25 @@
+[2023-05-18T22:01:30+08:00][error] [0]Call to a member function toArray() on array[/var/www/html/app/admin/controller/IndexController.php:21]
+[2023-05-18T22:05:08+08:00][error] [0]Call to a member function toArray() on array[/var/www/html/app/admin/controller/IndexController.php:21]
+[2023-05-18T22:06:56+08:00][error] [0]Call to a member function toArray() on null[/var/www/html/app/admin/controller/IndexController.php:23]
+[2023-05-18T22:31:03+08:00][error] [8]未定义数组索引: username[/var/www/html/app/admin/controller/IndexController.php:17]
+[2023-05-18T22:31:03+08:00][error] url:0.0.0.0:8082/admin/index?master_url=/admin/index
+code:0
+file:/var/www/html/app/admin/controller/IndexController.php
+line:17
+message:Undefined index: username
+
+[2023-05-18T22:33:17+08:00][error] [10501]SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'bi.bi_days_user_charge.uid' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by[/var/www/html/vendor/topthink/think-orm/src/db/PDOConnection.php:722]
+[2023-05-18T22:40:39+08:00][error] [8]未定义变量: roomType[/var/www/html/app/admin/controller/RoomController.php:462]
+[2023-05-18T22:40:39+08:00][error] url:0.0.0.0:8082/admin/roomList?master_url=/admin/roomList&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Im5ld2FkbWluIiwiaWQiOjEwNTUsImxhc3RfbG9naW5fdGltZSI6MTY4NDQyMDI4NCwiYXRpbWUiOjE2ODQ0MjAyODR9.QzlZNkSTCxJrjsSekM4WJoUwp_QH0v_iTEOAvKTyTso
+code:0
+file:/var/www/html/app/admin/controller/RoomController.php
+line:462
+message:Undefined variable: roomType
+
+[2023-05-18T22:46:41+08:00][error] [8]未定义变量: roomType[/var/www/html/app/admin/controller/RoomController.php:462]
+[2023-05-18T22:46:41+08:00][error] url:0.0.0.0:8082/admin/roomList?master_url=/admin/roomList&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Im5ld2FkbWluIiwiaWQiOjEwNTUsImxhc3RfbG9naW5fdGltZSI6MTY4NDQyMDI4NCwiYXRpbWUiOjE2ODQ0MjAyODR9.QzlZNkSTCxJrjsSekM4WJoUwp_QH0v_iTEOAvKTyTso
+code:0
+file:/var/www/html/app/admin/controller/RoomController.php
+line:462
+message:Undefined variable: roomType
+
