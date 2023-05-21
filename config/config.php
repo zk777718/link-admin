@@ -8,10 +8,10 @@
 return array(
     'Agora_appid' => 'e468e99e3ebc424b9575797f0886e3d6', //声网appid测试
     'APP_URL_image' => 'http://resource.ddyuyin.com/', //域名地址oss
-    'admin_url' => 'http://admin.ddyuyin.com/admin/',
+    'admin_url' => 'http://81.70.77.240/admin/',
     'socket_url' => 'http://py.ddyuyin.com/iapi/broadcast',
-    'socket_url_base' => 'http://py.ddyuyin.com/',
-    'app_api_url' => 'http://api.ddyuyin.com/',
+    'socket_url_base' => 'http://101.43.223.234:8081/',
+    'app_api_url' => 'http://101.43.223.234/',
     'game_api_url' => 'http://pygame.fqparty.com/',
 
     'OSS' => [
@@ -29,9 +29,9 @@ return array(
     'redis' => [
         // 驱动方式
         'type' => 'redis',
-        'host' => 'r-2zep27hvk4ys3nypqu.redis.rds.aliyuncs.com',
-        'port' => 6379,
-        'password' => 'nPyOOousxrIT7IQq',
+        'host' => 'bj-crs-kxk9azol.sql.tencentcdb.com',
+        'port' => 28660,
+        'password' => 'vk_B34Tg)x@$5Rvb',
     ],
     'MQTT' => [
         'instanceId' => 'post-cn-mp91m5u8f09',
