@@ -7,7 +7,7 @@
  */
 return array(
     'Agora_appid' => 'e468e99e3ebc424b9575797f0886e3d6', //声网appid测试
-    'APP_URL_image' => 'http://resource.ddyuyin.com/', //域名地址oss
+    'APP_URL_image' => 'http://like-game-1318171620.cos.ap-beijing.myqcloud.com/', //域名地址oss
     'admin_url' => 'http://81.70.77.240/admin/',
     'socket_url' => 'http://py.ddyuyin.com/iapi/broadcast',
     'socket_url_base' => 'http://pyapi.jiawei6.cn/',
