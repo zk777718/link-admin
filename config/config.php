@@ -10,8 +10,8 @@ return array(
     'APP_URL_image' => 'http://resource.ddyuyin.com/', //域名地址oss
     'admin_url' => 'http://81.70.77.240/admin/',
     'socket_url' => 'http://py.ddyuyin.com/iapi/broadcast',
-    'socket_url_base' => 'http://101.43.223.234:8081/',
-    'app_api_url' => 'http://101.43.223.234/',
+    'socket_url_base' => 'http://pyapi.jiawei6.cn/',
+    'app_api_url' => 'http://php-api.jiawei6.cn/',
     'game_api_url' => 'http://pygame.fqparty.com/',
 
     'OSS' => [
