@@ -5,6 +5,8 @@
  * Date: 2019/7/24
  * Time: 9:42
  */
+use think\facade\Env;
+
 return array(
     'Agora_appid' => 'e468e99e3ebc424b9575797f0886e3d6', //声网appid测试
     'APP_URL_image' => 'http://like-game-1318171620.cos.ap-beijing.myqcloud.com/', //域名地址oss
@@ -29,9 +31,9 @@ return array(
     'redis' => [
         // 驱动方式
         'type' => 'redis',
-        'host' => 'bj-crs-kxk9azol.sql.tencentcdb.com',
-        'port' => 28660,
-        'password' => 'vk_B34Tg)x@$5Rvb',
+        'host' => Env::get('redis.hostname', 'bj-crs-kxk9azol.sql.tencentcdb.com'),
+        'port' => Env::get('redis.port', 6379),
+        'password' => Env::get('redis.password', 'vk_B34Tg)x@$5Rvb'),
     ],
     'MQTT' => [
         'instanceId' => 'post-cn-mp91m5u8f09',
