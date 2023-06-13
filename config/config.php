@@ -10,7 +10,7 @@ use think\facade\Env;
 return array(
     'Agora_appid' => 'e468e99e3ebc424b9575797f0886e3d6', //声网appid测试
     'APP_URL_image' => 'http://like-game-1318171620.cos.ap-beijing.myqcloud.com/', //域名地址oss
-    'admin_url' => 'http://81.70.77.240/admin/',
+    'admin_url' => 'http://admin.jiawei6.cn/admin/',
     'socket_url' => 'http://py.ddyuyin.com/iapi/broadcast',
     'socket_url_base' => 'http://pyapi.jiawei6.cn/',
     'app_api_url' => 'http://php-api.jiawei6.cn/',
@@ -160,7 +160,7 @@ return array(
     'qq' => '1363995192',
     'service_email' => 'a17325993101@163.com', //封禁提示的客服邮箱
     'ampq_room' => [
-        'host' => '172.31.48.10',
+        'host' => '101.42.26.154',
         'port' => 5672,
         'user' => 'fanqie',
         'password' => 'fanqie123',
@@ -199,34 +199,34 @@ return array(
 
     //elasticsearch config
     'es_config' => [
-        '172.31.48.10:9200',
+        '101.42.36.131:9200',
     ],
 
     //聊天消息队列名
     'im_queue' => [
-        'host' => '172.31.48.10',
+        'host' => '101.42.26.154',
         'port' => 5672,
-        'user' => 'fanqie',
-        'password' => 'fanqie123',
+        'user' => 'php-service',
+        'password' => 'php-service',
         'queue_name' => 'q_im_message',
     ],
 
     //派单
     'qrcodepromote_queue' => [
-        'host' => '172.31.48.10',
+        'host' => '101.42.26.154',
         'port' => 5672,
-        'user' => 'fanqie',
-        'password' => 'fanqie123',
+        'user' => 'php-service',
+        'password' => 'php-service',
         'queue_name' => 'q_user_register_referee',
         'exchange' => 'ex_user_register_referee',
     ],
 
     //rabbitmq消息队列的基本配置
     "rabbitmq" => [
-        'host' => '172.31.48.10',
+        'host' => '101.42.26.154',
         'port' => 5672,
-        'user' => 'fanqie',
-        'password' => 'fanqie123',
+        'user' => 'php-service',
+        'password' => 'php-service',
     ],
     "rabbitmq_exchange_name" => "ex_flow_message_bus", //转发用的交换机
 );
