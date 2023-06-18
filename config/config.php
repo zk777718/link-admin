@@ -9,7 +9,7 @@ use think\facade\Env;
 
 return array(
     'Agora_appid' => 'e468e99e3ebc424b9575797f0886e3d6', //声网appid测试
-    'APP_URL_image' => 'http://like-game-1318171620.cos.ap-beijing.myqcloud.com', //域名地址oss
+    'APP_URL_image' => 'http://like-game-1318171620.cos.ap-beijing.myqcloud.com/', //域名地址oss
     'admin_url' => 'http://admin.jiawei6.cn/admin/',
     'socket_url' => 'http://py.ddyuyin.com/iapi/broadcast',
     'socket_url_base' => 'http://pyapi.jiawei6.cn/',
