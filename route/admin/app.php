@@ -1079,3 +1079,5 @@ Route::post('withdrawWhiteListAdd', 'WithdrawalController/withdrawWhiteListAdd')
 Route::post('enterRoomUserList', 'RoomCoinController/enterRoomUserList'); //用户进房间列表
 Route::get('whisperList', 'ConfigController/whisperList'); //悄悄话列表
 Route::post('whisperHandle', 'ConfigController/whisperHandle'); //悄悄话管理
+Route::get('soundRecordList', 'ConfigController/soundRecordList'); //录音词库
+Route::post('soundRecordHandle', 'ConfigController/soundRecordHandle'); //录音词库管理

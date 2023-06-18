@@ -2664,7 +2664,8 @@ class ConfigService
                 return [];
             }
         } else {
-            return [];
+            $redis = RedisCommon::getInstance()->getRedis(['select' => 3]);
+            return $redis->sMembers('banned_cache_set');
         }
     }
     //敏感词添加

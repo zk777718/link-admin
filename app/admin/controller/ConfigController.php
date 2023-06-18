@@ -6,6 +6,7 @@ use app\admin\common\AdminBaseController;
 use app\admin\common\CommonConst;
 use app\admin\model\ConfigModel;
 use app\admin\model\SiteconfigModel;
+use app\admin\model\SoundRecordModel;
 use app\admin\script\analysis\GiftsCommon;
 use app\admin\service\ConfigService;
 use app\admin\service\RoomService;
@@ -1245,9 +1246,59 @@ class ConfigController extends AdminBaseController
        }
     }
 
+    // 录音词库
+    public function soundRecordList()
+    {
+        $typeName = [
+            1 => '情感',
+            2 => '台词',
+            3 => '唱一句',
+        ];
+        $list = SoundRecordModel::getInstance()->getModel()->where(["is_delete" => 1])->select();
+        if ($list != null) {
+            $list = $list->toArray();
+        }
+        if (!empty($list)) {
+            foreach ($list as &$item) {
+                $item['type_name'] = $typeName[$item['type']] ?? '';
+            }
+        }
+        View::assign('data', $list);
+        View::assign('token', $this->request->param('token'));
+        View::assign('user_role_menu', $this->user_role_menu);
+        return View::fetch('siteconfig/config/soundRecord');
+    }
 
+    // 录音新增或者删除
+    public function soundRecordHandle()
+    {
+        try{
+            $action = $this->request->param('action', 'trim');
+            $word = $this->request->param('word', 'trim');
+            $id = $this->request->param('id', 'trim');
+            $type = $this->request->param('type', 'trim');
 
+            if ($action == 'del') {
+                SoundRecordModel::getInstance()->getModel()->where(["id"=>$id])->update([
+                    "is_delete" => 2,
+                    "update_time" => time(),
+                    ]);
+                Log::INFO("soundRecordHandle:del:".$word.":admin_id:".$this->token['id']??0);
+            }
+            if ($action == 'add') {
+                SoundRecordModel::getInstance()->getModel()->insert([
+                    "type" => $type,
+                    "record" => $word,
+                    "created_time" => time(),
+                    "update_time" => time(),
+                ]);
+                Log::INFO("soundRecordHandle:add:".$word.":admin_id:".$this->token['id']??0);
+            }
+            echo json_encode(['code' => 200, 'msg' => '操作成功']);
+            die;
 
-
-
+        }catch (\Throwable $e){
+            Log::error("soundRecordHandle:error".$e->getMessage().$e->getLine().$e->getFile());
+        }
+    }
 }
